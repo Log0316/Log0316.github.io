@@ -27,17 +27,17 @@
 <meta property="og:site_name" content="清水阁">
 <meta property="og:description" content="对于所使用的数据，拟合使用fitter库（基于Scipy）进行拟合。更新中……">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2023/09/22/basic/basic/IPCC_AR6_WGI_Figure_1_11.png">
-<meta property="og:image" content="http://example.com/2023/09/22/basic/basic/Fig2.png">
-<meta property="og:image" content="http://example.com/2023/09/22/basic/basic/Fig3.png">
-<meta property="og:image" content="http://example.com/2023/09/22/basic/basic/Fig4.png">
+<meta property="og:image" content="http://example.com/2023/09/22/basic/IPCC_AR6_WGI_Figure_1_11.png">
+<meta property="og:image" content="http://example.com/2023/09/22/basic/Fig2.png">
+<meta property="og:image" content="http://example.com/2023/09/22/basic/Fig3.png">
+<meta property="og:image" content="http://example.com/2023/09/22/basic/Fig4.png">
 <meta property="article:published_time" content="2023-09-21T16:48:33.000Z">
-<meta property="article:modified_time" content="2023-10-07T15:36:12.081Z">
+<meta property="article:modified_time" content="2023-10-07T16:43:13.467Z">
 <meta property="article:author" content="安然">
 <meta property="article:tag" content="气象程序设计及绘图">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/09/22/basic/basic/IPCC_AR6_WGI_Figure_1_11.png">
+<meta name="twitter:image" content="http://example.com/2023/09/22/basic/IPCC_AR6_WGI_Figure_1_11.png">
 
 <link rel="canonical" href="http://example.com/2023/09/22/basic/">
 
@@ -193,7 +193,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-07 23:36:12" itemprop="dateModified" datetime="2023-10-07T23:36:12+08:00">2023-10-07</time>
+                <time title="修改时间：2023-10-08 00:43:13" itemprop="dateModified" datetime="2023-10-08T00:43:13+08:00">2023-10-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -230,44 +230,34 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>对于所使用的数据，拟合使用fitter库（基于Scipy）进行拟合。<br><br>更新中……<br><span id="more"></span></p>
-<h2 id="Common-Statistics"><a href="#Common-Statistics" class="headerlink" title="Common Statistics"></a>Common Statistics</h2><p><strong>Mean</strong>: </p>
-<script type="math/tex; mode=display">\bar x=\frac{1}{N}(x_1+x_2+\cdots+x_N)</script><p><strong>Anomaly</strong> : </p>
-<script type="math/tex; mode=display">x=x_i-\bar{x}</script><p>They reflect the degree of deviation from the climate average.</p>
-<p><img src="basic/IPCC_AR6_WGI_Figure_1_11.png" alt="img"></p>
-<p><strong>Variance</strong>: </p>
-<script type="math/tex; mode=display">
-s^2=\frac{1}{N}\sum_{i=1}^N(x_i-\bar x)^2</script><p><strong>Standard Deviation</strong>: </p>
-<script type="math/tex; mode=display">
-s=\sqrt{s^2}=\sqrt{\frac{1}{N}\sum_{i=1}^N(x_i-\bar x)^2}</script><p>They describe how far the data deviate from the mean.<br></p>
-<p><img src="basic\Fig2.png" alt="img"><br><br><br></p>
-<p><strong>Pearson Correlation Coefficient</strong>: </p>
-<script type="math/tex; mode=display">
-R_{ps}=\frac{Cov(x,y)}{s_xs_y}</script><p>It is used to describe the linear correlated relationship, easy but not robust and not resistant. For many relationship in the real world is non-linear.<br><br><br><strong>Spearman Correlation Coefficient</strong>: </p>
-<script type="math/tex; mode=display">
-R_{sp}=1-\frac{6\sum_{i=1}^nRD_i^2}{n(n^2-1)}</script><p>It is robust and resistant, while used to analyze data pairs that are nonlinear related and are not susceptible to outliers.<br></p>
+        <p>对于所使用的数据，拟合使用fitter库（基于Scipy）进行拟合。<br><br>更新中……</p>
+<span id="more"></span>
+<h2 id="Common-Statistics"><a href="#Common-Statistics" class="headerlink" title="Common Statistics"></a>Common Statistics</h2><p><strong>Mean</strong>:<br>$$\bar x&#x3D;\frac{1}{N}(x_1+x_2+\cdots+x_N)$$</p>
+<p><strong>Anomaly</strong> :<br>$$x&#x3D;x_i-\bar{x}$$</p>
+<p>They reflect the degree of deviation from the climate average.</p>
+<p><img src="/2023/09/22/basic/IPCC_AR6_WGI_Figure_1_11.png" alt="img"></p>
+<p><strong>Variance</strong>:<br>$$<br>s^2&#x3D;\frac{1}{N}\sum_{i&#x3D;1}^N(x_i-\bar x)^2<br>$$<br><strong>Standard Deviation</strong>:<br>$$<br>s&#x3D;\sqrt{s^2}&#x3D;\sqrt{\frac{1}{N}\sum_{i&#x3D;1}^N(x_i-\bar x)^2}<br>$$</p>
+<p>They describe how far the data deviate from the mean.<br></p>
+<p><img src="/2023/09/22/basic/Fig2.png" alt="img"><br><br><br></p>
+<p><strong>Pearson Correlation Coefficient</strong>:<br>$$<br>R_{ps}&#x3D;\frac{Cov(x,y)}{s_xs_y}<br>$$<br>It is used to describe the linear correlated relationship, easy but not robust and not resistant. For many relationship in the real world is non-linear.<br><br><br><strong>Spearman Correlation Coefficient</strong>:<br>$$<br>R_{sp}&#x3D;1-\frac{6\sum_{i&#x3D;1}^nRD_i^2}{n(n^2-1)}<br>$$</p>
+<p>It is robust and resistant, while used to analyze data pairs that are nonlinear related and are not susceptible to outliers.<br></p>
 <p>In addition, there are many other coefficient characterize the correlation. Such as <strong>teleconnection</strong> like MJO, PAN, AO etc. and <strong>spatial correlation</strong> depicted the correlation in space, and the <strong>serial correlation</strong>, <strong>lagged correlation</strong> and <strong>autocorrelation</strong> depicted the relationship in time.</p>
 <p>All these coefficient describe the statistical correlation but they do not reveals the physical process. The most intuitive example is that if a tree is planted while you were born then the length of the tree is highly correlated with your height, but they have no relationship in physics. <br></p>
-<h2 id="Probability-distribution"><a href="#Probability-distribution" class="headerlink" title="Probability distribution"></a>Probability distribution</h2><p>While we handling a series, we probably need to know the distribution.<br><br><br><br>For discrete data,<br><br><strong>Poisson Distribution</strong>:</p>
-<script type="math/tex; mode=display">
-P{(X=x)}=\frac{\mu^xe^{-\mu}}{x!}</script><p>The probability distribution of the number of A events in the unit interval (e.g., unit time, unit space, etc.).<br><br><br>For continuous variables, <br><br><strong>Probability Density Function (PDF)</strong>:</p>
-<script type="math/tex; mode=display">
-P(x_1<X<x_2)=\int_{x_1}^{x_2}f(x)dx</script><p><br></p>
-<p><strong>Cumulative Distribution Function (CDF)</strong>:</p>
-<script type="math/tex; mode=display">
-F(x)=P(x_1<X<x)=\int_{x_1}^{x}f(t)dt</script><p>Given the cumulative probability (p) of a random variable, an inverse transformation can be performed — <br><br><br><br><strong>Quantile Function</strong></p>
-<script type="math/tex; mode=display">
-F^{-1}(p)=x(F)</script><p>Some specific distribution are given:<br><br><br><br><strong>normal distribution</strong>:</p>
-<script type="math/tex; mode=display">
-f(x)=\frac{1}{\sigma\sqrt{2\pi}}exp[{-\frac{(x-\mu)^2}{2\sigma}}], -\infty<x<+\infty</script><p><center>
-<img src="basic\Fig3.png" width="50%" height="50%">
-</center><br><br></p>
-<p><strong>Gamma distribution</strong>:</p>
-<script type="math/tex; mode=display">
-f(x|\alpha,\beta) = \frac{(x/\beta)^{\alpha-1}e^{-x/\beta}}{\beta\Gamma(\alpha)}</script><p><center>
-<img src="basic\Fig4.png" width="50%" height="50%">
-</center><br><br></p>
-<p><strong>Chi-Square distribution</strong>:<br><br>It is a specific situation while $\beta=2$ in gamma distribution.<br><br><br><strong>Pearson III distribution</strong>:<br><br>Let $x=x-\zeta$, then the G-D changes into Pearson III.<br><br>It can be used to construct a standardized precip index (SPI) and standardized precip-Evapo Index (SPEI).</p>
+<h2 id="Probability-distribution"><a href="#Probability-distribution" class="headerlink" title="Probability distribution"></a>Probability distribution</h2><p>While we handling a series, we probably need to know the distribution.<br><br><br><br>For discrete data,<br><br><strong>Poisson Distribution</strong>:<br>$$<br>P{(X&#x3D;x)}&#x3D;\frac{\mu^xe^{-\mu}}{x!}<br>$$<br>The probability distribution of the number of A events in the unit interval (e.g., unit time, unit space, etc.).<br><br><br>For continuous variables, <br><br><strong>Probability Density Function (PDF)</strong>:<br>$$<br>P(x_1&lt;X&lt;x_2)&#x3D;\int_{x_1}^{x_2}f(x)dx<br>$$<br><br></p>
+<p><strong>Cumulative Distribution Function (CDF)</strong>:<br>$$<br>F(x)&#x3D;P(x_1&lt;X&lt;x)&#x3D;\int_{x_1}^{x}f(t)dt<br>$$<br>Given the cumulative probability (p) of a random variable, an inverse transformation can be performed — <br><br><br><br><strong>Quantile Function</strong><br>$$<br>F^{-1}(p)&#x3D;x(F)<br>$$</p>
+<p>Some specific distribution are given:<br><br><br><br><strong>normal distribution</strong>:<br>$$<br>f(x)&#x3D;\frac{1}{\sigma\sqrt{2\pi}}exp[{-\frac{(x-\mu)^2}{2\sigma}}], -\infty&lt;x&lt;+\infty<br>$$</p>
+<center>
+<img src="/2023/09/22/basic/Fig3.png" width="50%" height="50%">
+</center>
+<br>
+
+<p><strong>Gamma distribution</strong>:<br>$$<br>f(x|\alpha,\beta) &#x3D; \frac{(x&#x2F;\beta)^{\alpha-1}e^{-x&#x2F;\beta}}{\beta\Gamma(\alpha)}<br>$$</p>
+<center>
+<img src="/2023/09/22/basic/Fig4.png" width="50%" height="50%">
+</center>
+<br>
+
+<p><strong>Chi-Square distribution</strong>:<br><br>It is a specific situation while $\beta&#x3D;2$ in gamma distribution.<br><br><br><strong>Pearson III distribution</strong>:<br><br>Let $x&#x3D;x-\zeta$, then the G-D changes into Pearson III.<br><br>It can be used to construct a standardized precip index (SPI) and standardized precip-Evapo Index (SPEI).</p>
 <p><strong>Generalized Extreme Value distribution</strong>:<br></p>
 
     </div>
